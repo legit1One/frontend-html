@@ -1,0 +1,108 @@
+@use "sass:map";
+@import "imported";
+
+//:root {
+//  --main-color: #d72222;
+//}
+//
+//$mainColor: #2d64da;
+//
+//%error-message {
+//  //background: var(--main-color);
+//  background: $mainColor;
+//  width: fit-content;
+//  color: white;
+//  padding: 4px 8px;
+//  text-align: center;
+//  min-width: 200px;
+//}
+//
+//@mixin font-large ($fontSize) {
+//  font-size: $fontSize;
+//  font-weight: 700;
+//}
+//
+//@mixin flex($justify: center, $align: center) {
+//  display: flex;
+//  justify-content: $justify;
+//  align-items: $align;
+//}
+//
+//.error {
+//  @extend %error-message;
+//  @include font-large(24px);
+//}
+//
+//.color-blue {
+//  color: blue;
+//}
+//
+//.error-important {
+//  @extend %error-message,.color-blue;
+//
+//  //@extend .color-blue, .error;
+//  @include font-large(12px);
+//  @include flex;
+//  text-transform: uppercase;
+//  margin-top: 20px;
+//}
+
+$list: 20, 40, 50;
+
+//margin-20 => margin:20px
+//margin-40 => margin:40px
+//margin-50 => margin:50px
+$list: 10, 5, 23;
+
+@each $value in $list {
+    $value: calc($value * 2);
+
+   .margin-#{$value} {
+     margin: #{$value}px;
+   }
+
+   .padding-#{$value} {
+     margin: #{$value}em;
+   }
+}
+
+$map: ("font-size": 50px, "text-transform": uppercase);
+
+@each $key, $value in $map {
+  .text-#{$key} {
+    #{$key}: $value;
+  }
+}
+
+
+$sizes: (
+  "S": 14px,
+  "M": 16px,
+  "L": 20px
+);
+
+@debug map.get($sizes, "L");
+
+.text-large {
+  font-size: map.get($sizes, "L");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

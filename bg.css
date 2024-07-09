@@ -1,0 +1,13 @@
+.full-sized {
+    background: no-repeat url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8074b88-7839-4cb6-8ee4-6920d3405aac/df1innp-812c3dbd-588e-419b-9f21-abd61895169c.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4MDc0Yjg4LTc4MzktNGNiNi04ZWU0LTY5MjBkMzQwNWFhY1wvZGYxaW5ucC04MTJjM2RiZC01ODhlLTQxOWItOWYyMS1hYmQ2MTg5NTE2OWMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1GqhafnmUWHl0Yej14rDfR89AoWbjpmYnqFEf_OXo_U");
+    width: 200px;
+    height: 300px;
+    background-size: contain;
+}
+
+.bg {
+    background: no-repeat url("https://w0.peakpx.com/wallpaper/479/217/HD-wallpaper-itachi-uchiha-atmosphere-cloud.jpg") #0F172A center center;
+    width: 200px;
+    height: 400px;
+    background-size: 100px 150px;
+}

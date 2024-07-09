@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    background-repeat: no-repeat;
+}
+
+.webpage-body {
+    padding: 0 160px;
+}
+
+/* ------------------------------------------------------ Slider */
+.slider img {
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: #ffffff;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c7275;
+    margin: 0 32px;
+    top: calc(50% - 26px);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+    background: url("./images/arrow.svg");
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.swiper-button-next::after {
+    background: url("./images/arrow.svg");
+    transform: rotate(180deg);
+}
+
+.swiper-pagination-bullet {
+    background: #fefefe;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 100px;
+}
+
+.swiper-pagination {
+    padding-bottom: 32px;
+    min-width: 100px;
+}
+
+/* ------------------------------------------------------ Categories cascade */
+.categories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px 320px;
+    gap: 24px;
+    justify-content: center;
+}
+
+.category {
+    max-width: calc(100vw - 32px);
+    background-size: contain;
+    padding: 48px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #f5f5f7;
+}
+
+.category-title {
+    color: #141718;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    line-height: 38px;
+    font-size: 34px;
+}
+
+.category-link {
+    color: #141718;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    line-height: 28px;
+    font-family: Inter, sans-serif;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #141718;
+    width: fit-content;
+    margin-top: 12px;
+}
+
+.category-link::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("https://www.svgrepo.com/show/533621/arrow-sm-right.svg");
+    background-size: contain;
+}
+
+.category[data-value="living"] {
+    background-image: url("./images/living.svg");
+    grid-row: 1 / span 2;
+    justify-self: end;
+}
+
+.category[data-value="bedroom"] {
+    background-image: url("./images/bedroom.svg");
+}
+
+.category[data-value="kitchen"] {
+    background-image: url("./images/kitchen.svg");
+}
+
+.category[data-value="kitchen"],
+.category[data-value="bedroom"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* ------------------------------------------------------ Product carousel - header */
+
+.new-products {
+    margin: auto;
+    width: 100%;
+    height: 669px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.carousel-header {
+    width: 150px;
+    height: 90px;
+    line-height: 44px;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 48px 0;
+}
+
+.carousel-header span {
+    display: block;
+}
+
+.shop-link {
+    height: 28px;
+    width: 140px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin: 108px 0 48px 0;
+    border-bottom: 2px solid black;
+}
+
+.shop-link::after {
+    content: "";
+    background-image: url(/images/arrow1.svg);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+}
+
+.carousel {
+    width: 100%;
+    height: 485px;
+}
+
+/* ------------------------------------------------------ Product carousel - carousel */
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar,
+.swiper-scrollbar-horizontal {
+    width: calc(100% - 320px);
+    left: 160px;
+}
+
+.product-carousel {
+    min-width: calc(100% + 320px);
+    left: -160px;
+    height: 485px;
+    /* overflow: visible; */
+}
+
+.product-card {
+    max-width: 262px;
+    height: 433px;
+}
+
+/* ------------------------------------------------------ Product card */
+
+.product-card {
+    width: 262px;
+    height: 433px;
+}
+
+.product-info {
+    height: 72px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-info::before {
+    content: "";
+    background-image: url(./images/stars.svg);
+    width: 88px;
+    height: 16px;
+    display: block;
+}
+
+.product-name {
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.product-price {
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-card::before {
+    content: "";
+    background-image: url(./images/discount.svg);
+    width: 71px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 48px;
+    left: 16px;
+}
+
+.product-card::after {
+    background-image: url(./images/new.svg);
+    width: 67px;
+    height: 24px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.add-button {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    padding: 8px 70px;
+    letter-spacing: -0.4px;
+    width: 230px;
+    height: 46px;
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+    position: absolute;
+    top: 287px;
+    left: 16px;
+    display: none;
+}
+
+.product-card:hover .add-button {
+    display: flex;
+}
+
+.add-button:active {
+    background-color: #38cb89;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.add-wishlist-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: none;
+    height: 34px;
+    width: 34px;
+    padding: 7px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    display: none;
+}
+
+.product-card:hover .add-wishlist-button {
+    display: flex;
+}
+
+.add-wishlist-button:active {
+    background-color: #ff4191;
+    transform: scale(1.1);
+    transition: transform 0.3s linear;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        position: relative;
+        width: 100%;
+    }
+
+    .webpage-body {
+        padding: 0 32px;
+        overflow-x: hidden;
+    }
+
+    /* ------------------------------------------------------ Slider  */
+    .slider {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .slider img {
+        height: 304px;
+        object-fit: cover;
+    }
+
+    .swiper-pagination {
+        padding-bottom: 16px;
+    }
+
+    /* ------------------------------------------------------ Categories */
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 180px);
+        gap: 16px;
+        justify-items: center;
+    }
+
+    .category {
+        background-position: right;
+    }
+
+    .category[data-value="living"] {
+        justify-self: center;
+    }
+
+    /* ------------------------------------------------------ Product carousel-header */
+
+    .new-products {
+        height: 680px;
+    }
+
+    .carousel-header {
+        margin: 32px 0 40px 0;
+        height: 76px;
+        font-size: 34px;
+    }
+
+    .shop-link {
+        order: 1;
+        margin: 40px 0 32px 0;
+    }
+
+    .carousel {
+        height: 436px;
+    }
+
+    /* ------------------------------------------------------ Product carousel - carousel */
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        left: 30px;
+        margin: 40px 0;
+        width: calc(100% + 64px);
+    }
+
+    .product-carousel {
+        width: calc(100% - 64px);
+        left: -30px;
+        height: 476px;
+        min-width: 100%;
+    }
+
+    .product-card {
+        width: 231px;
+        height: 392px;
+    }
+
+    /* ------------------------------------------------------ Product card */
+    .product-image {
+        width: 231px;
+        height: 308px;
+    }
+
+    .add-button {
+        width: 202px;
+        height: 40px;
+        font-size: 16px;
+        padding: 6px 55px;
+        left: 14px;
+        top: 253px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    /* ------------------------------------------------------ Product carousel - carousel */
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        left: 30px;
+        margin: 40px 0;
+        width: calc(100% - 64px);
+    }
+
+
+    .product-carousel {
+        width: calc(100% + 64px);
+        left: -30px;
+        height: 476px;
+        min-width: 100%;
+    }
+
+    .product-card {
+        width: 231px;
+        height: 392px;
+    }
+}

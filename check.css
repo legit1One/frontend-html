@@ -1,0 +1,41 @@
+.example {
+  color: red;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.padding-20 {
+  margin: 20em;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.padding-10 {
+  margin: 10em;
+}
+
+.margin-46 {
+  margin: 46px;
+}
+
+.padding-46 {
+  margin: 46em;
+}
+
+.text-font-size {
+  font-size: 50px;
+}
+
+.text-text-transform {
+  text-transform: uppercase;
+}
+
+.text-large {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=check.css.map */
